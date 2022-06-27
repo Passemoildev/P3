@@ -7787,6 +7787,10 @@ readers do not read off random characters that represent icons */
   font-display: block;
   src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
 
+.fa-light{
+  font-family: 'Font Awesome 6 Free';
+}
+
 .fas,
 .fa-solid {
   font-family: 'Font Awesome 6 Free';

@@ -1,0 +1,9 @@
+$color_primary:#f6f6f6;
+$color-secondary:#ffffff;
+$primary_darker:#eaeaea;
+$color_footer:#353535;
+$color_button_icon:#9356dc;
+
+@mixin .police{
+    color:$color_primary
+}

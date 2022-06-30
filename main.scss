@@ -1,0 +1,26 @@
+@import "./scss/Utils/variables";
+
+@mixin typo_txt{
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin typo_title{
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin typo_title{
+    color:$color_primary
+}
+
+@mixin mobile-only {
+    
+@media all and (max-width:map-get($breakpoints, mobile)){
+
+    grid-template-columns: 1fr;
+
+}}
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include mobile-only;
+  }

@@ -1,0 +1,9 @@
+.header{
+    background-color: $color-bg2;
+    display: flex;
+    justify-content: center;
+
+    .header__logo{
+        width: 40%;
+    }
+}

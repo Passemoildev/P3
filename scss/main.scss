@@ -1,4 +1,7 @@
-@import "./scss/Utils/variables";
+@import "./Utils/variables";
+@import "./Base/base.scss";
+@import "./Layouts/header";
+@import "./Layouts/unic.scss";
 
 @mixin typo_txt{
     font-family: 'Roboto', sans-serif;
@@ -21,6 +24,6 @@
 }}
 .proj-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     @include mobile-only;
-  }
+  } 

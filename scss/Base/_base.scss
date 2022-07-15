@@ -1,0 +1,55 @@
+body{
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+
+
+h1, h2, h3, p{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.bloc_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn{
+    border-radius: 10%;
+    
+}
+
+.carte_fct{
+    justify-content: center;
+    align-items: center;
+    @include flex-row();
+
+}
+
+.spot_fct{
+    border:solid,transparent;
+    border-radius: 10px;
+    background-color: $color_bg1;
+    @include flex_row;
+}
+
+.cont_number{
+    border-radius: 50%;
+    border: solid transparent;
+    background-color: $color_primary;
+    width: 20px;
+    height: 50%;
+    color: $color-bg2;
+    @include flex-row();
+
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+
+}

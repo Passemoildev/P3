@@ -8,20 +8,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./css/style.css">
 
         <title>OhMyFood</title>
     </head>
 
     <body class="body">
 
-        <header>
-            <div class="cont_logo">
-                <img src="./Ressources/images/logo/ohmyfood.png" alt="logo">
-            </div>
+        <header class="header">
+                <img src="./Ressources/images/logo/ohmyfood.png" alt="logo" class="header__logo">
         </header>
 
-        <main>
+        <main >
 
             <div class="cont_location">
                 <span class="cont_logo_loc">
@@ -32,38 +30,42 @@
                 </span>
             </div>
 
-            <div class="accroche">
+            <div class="bloc_txt">
                 <div class="accroche_title">
                     <h2>Reservez le menu qui vous convient</h2>
                 </div>
 
                 <DIV class="accroche_detail">
-                    Découvrez des restaurants d'exception, sélectionnés par nos soins.
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 </DIV>
 
-                <div class="btn_accroche">
+                <div class="bloc_txt__btn">
                     <a class="link_rest" href="#">
-                        <button class="btn_link_rest">Explorez nos restaurants</button>
+                        <button class="btn">Explorez nos restaurants</button>
                     </a>
                 </div>
             </div>
 
             <div class="fontionnement">
 
+                <h1>Fonctionnement</h1>
+
                 <div class="carte_fct">
-                    <div>1</div>
-                    <span><i class="fa-solid fa-mobile-screen-button"></i></span>
-                    <span><h3>Choisissez un restaurant</h3></span>
+                    <div class="cont_number">1</div>
+                    <span class="spot_fct">
+                        <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+                        <span><h3>Choisissez un restaurant</h3></span>
+                    </span>
                 </div>
 
                 <div class="carte_fct">
-                    <div>2</div>
+                    <div class="cont_number">2</div>
                     <span><i class="fa-solid fa-list"></i></span>
                     <h3>Composez votre menu</h3>
                 </div>
 
                 <div class="carte_fct">
-                    <div>3</div>
+                    <div class="cont_number">3</div>
                     <span><i class="fa-solid fa-store"></i></span>
                     <h3>Dégustez au restaurant</h3>
                 </div>
@@ -73,19 +75,19 @@
 
             <section>
                 <article>
-                    <div>
+                    <div class="proj-grid">
                         <div>
                             <h1>Restaurants</h1>
                         </div>
 
-                        <a class="carte_restau" href="./R003.html">
-                            <div class="cell_rest">
-                                <div class="slot_restau">
-                                    <div class="minia_restau">
+                        <a class="carte" href="./R003.html">
+                            <div class="cell">
+                                <div class="slot">
+                                    <div class="minia">
                                         <img src="./Ressources/images/restaurants/la_palette_du_gout.jpg" class="img_restau" alt="La palette du gout">
                                     </div>
-                                    <div class="descript_restau">
-                                        <div class="loc_restau">
+                                    <div class="descript">
+                                        <div class="loc">
                                             <h3>La palette du goût</h3>
                                             <p>Ménilmontant</p>
                                         </div>
@@ -99,14 +101,14 @@
                             </div>
                         </a>
 
-                        <a class="carte_restau" href="./R002.html">
-                            <div class="cell_rest">
-                                <div class="slot_restau">
-                                    <div class="minia_restau">
+                        <a class="carte" href="./R002.html">
+                            <div class="cell">
+                                <div class="slot">
+                                    <div class="minia">
                                         <img src="./Ressources/images/restaurants/La_note_enchantee.jpg" class="img_restau" alt="La note enchantée">
                                     </div>
-                                    <div class="descript_restau">
-                                        <div class="loc_restau">
+                                    <div class="descript">
+                                        <div class="loc">
                                             <h3>La note enchantée</h3>
                                             <p>Charonne</p>
                                         </div>
@@ -120,14 +122,14 @@
                             </div>
                         </a>
 
-                        <a class="carte_restau" href="./R001.html">
-                            <div class="cell_rest">
-                                <div class="slot_restau">
-                                    <div class="minia_restau">
+                        <a class="carte" href="./R001.html">
+                            <div class="cell">
+                                <div class="slot">
+                                    <div class="minia">
                                         <img src="./Ressources/images/restaurants/a_la_francaise.jpg" class="img_restau" alt="A la francaise">
                                     </div>
-                                    <div class="descript_restau">
-                                        <div class="loc_restau">
+                                    <div class="descript">
+                                        <div class="loc">
                                             <h3>A la française</h3>
                                                 <p>Cité Rouge</p>
                                         </div>
@@ -141,14 +143,14 @@
                             </div>
                         </a>
 
-                        <a class="carte_restau" href="./R004.html">
-                            <div class="cell_rest">
-                                <div class="slot_restau">
-                                    <div class="minia_restau">
+                        <a class="carte" href="./R004.html">
+                            <div class="cell">
+                                <div class="slot">
+                                    <div class="minia">
                                         <img src="./Ressources/images/restaurants/Le_delice_des_sens.jpg" class="img_restau" alt="Le_delice_des_sens">
                                     </div>
-                                    <div class="descript_restau">
-                                        <div class="loc_restau">
+                                    <div class="descript">
+                                        <div class="loc">
                                             <h3>Le délice des sens</h3>
                                                 <p>Folie-Méricourt</p>
                                         </div>

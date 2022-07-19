@@ -9,14 +9,13 @@
 @mixin typo_title{
     color:$color_primary
 }
-
 @mixin mobile-only {
     
-@media all and (max-width:map-get($breakpoints, mobile)){
-
-    grid-template-columns: 1fr;
-
-}}
+    @media all and (max-width:map-get($breakpoints, mobile)){
+    
+        grid-template-columns: 1fr;
+    
+    }}
 
 @mixin card-shadow ($color:$color_bg3){
     box-shadow: 5px 5px 3px $color;

@@ -1,10 +1,13 @@
+/*@use "./Utils/mixins" as m;*/
+
+
 body{
     font-family: 'Roboto-Regular', sans-serif;
 }
 
 
 
-h1, h2, h3, p{
+h1, h2, h3, p, i{
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -60,10 +63,7 @@ h1, h2, h3, p{
 
 .cont_new{
     background-color: $color-trd;
-    color:$color-trd;
-    @if (color==background-color) {
-        $color-trd:darken($color-trd, 20%);        
-    }
+    color:darken($color-trd, 40%);
     width: 80px;
     position: relative;
     bottom: 130px;
@@ -99,5 +99,11 @@ a{
 
 .carte{
     width:90%;
-    @include card-shadow;
+   @include card-shadow;
+   margin-bottom: 10px;
+   height: 200px;
+}
+
+.minia{
+    height: 115px;
 }

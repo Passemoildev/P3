@@ -3,49 +3,68 @@
 
 body{
     font-family: 'Roboto-Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 
-h1, h2, h3, p, i{
+h1, h2, h3, i{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+
+}
+
+h4, p{
     padding-left: 1rem;
     padding-right: 1rem;
 
 }
+
+.acctitle, .accdetail  {
+        height: 33%;
+        text-align: center;
+    }
+
 
 .bloc_txt{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    background-color: $color-bg1;
 }
 
 .btn{
-    border-radius: 10%;
-    
+    border-radius: 25px;
+    border: 0px;
+    color: $color-bg2;
+    background: linear-gradient(to bottom right, blue, pink);
+    height: 40px;
+    margin-bottom: 16px;
 }
 
-.carte_fct{
+.howitworks{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
 
+    &__spot{
+        border:solid,transparent;
+        border-radius: 10px;
+        background-color: $color_bg1;
+        padding: 20px;
+        margin: 10px;
+    
+    }
+
 }
 
-.spot_fct{
-    border:solid,transparent;
-    border-radius: 10px;
-    background-color: $color_bg1;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 20px;
-    margin: 10px;
-}
 
-.cont_number{
+.howitworks__number{
     border-radius: 50%;
     border: solid transparent;
     background-color: $color_primary;
@@ -66,8 +85,9 @@ h1, h2, h3, p, i{
     color:darken($color-trd, 40%);
     width: 80px;
     position: relative;
-    bottom: 130px;
-    left: 50%;
+    bottom: 85%;
+    left: 70%;
+    text-align: center;
 }
 
 
@@ -100,10 +120,26 @@ a{
 .carte{
     width:90%;
    @include card-shadow;
-   margin-bottom: 10px;
    height: 200px;
+   @include marge;
+   text-decoration: none;
+   @include border-carte;
+   background-color: $color-bg2;
+
+}
+
+.slot{
+    @include marge;
+    text-decoration: none;
+    @include border-carte;
+    background-color: $color-bg2;
+
 }
 
 .minia{
     height: 115px;
+}
+
+article{
+    background-color: $color-bg1;
 }

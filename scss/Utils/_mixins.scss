@@ -9,6 +9,9 @@
 @mixin typo_title{
     color:$color_primary
 }
+
+/* Mixins pour media queries*/
+
 @mixin mobile-only {
     
     @media all and (max-width:map-get($breakpoints, mobile)){
@@ -17,6 +20,17 @@
     
     }}
 
+
+
 @mixin card-shadow ($color:$color_bg3){
     box-shadow: 5px 5px 3px $color;
+}
+
+@mixin marge{
+    margin-bottom: 10px;
+}
+
+@mixin border-carte {
+    border: solid 0px;
+    border-radius: 25px;
 }

@@ -1,15 +1,21 @@
-footer{
+.footer{
     background-color: $color_footer;
     color: $color-bg2;
     display: flex;
     flex-direction: column;
+
+    &__title{
+        font-family: Shrikhand, sans-serif;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    &__row{
+        padding: 5px;
+    }
 }
 
-.type_logo{
-    font-family: Shrikhand, sans-serif;
-}
-
-.cont_links_footer{
-    display: flex;
-    flex-direction: column;
-}

@@ -10,14 +10,17 @@ body{
 
 
 
-h1, h2, h3, i{
+
+
+h1, h2 {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 1rem;
 
 }
 
-h4, p{
+
+h3, h4, p{
     padding-left: 1rem;
     padding-right: 1rem;
 
@@ -37,14 +40,27 @@ h4, p{
     background-color: $color-bg1;
 }
 
-.btn{
+.accbtn{
     border-radius: 25px;
     border: 0px;
     color: $color-bg2;
     background: linear-gradient(to bottom right, blue, pink);
     height: 40px;
     margin-bottom: 16px;
+    width: 60%;
+    vertical-align: middle;
+    display: table;
+    text-align: center;
 }
+
+.cont_link_rest{
+    display: table-cell;
+    vertical-align: middle;
+
+
+}
+
+
 
 .howitworks{
     justify-content: center;
@@ -53,32 +69,32 @@ h4, p{
     flex-direction: row;
 
     &__spot{
-        border:solid,transparent;
+        border:solid transparent;
         border-radius: 10px;
         background-color: $color_bg1;
         padding: 20px;
         margin: 10px;
+        display: flex;
+        width: 90%;
     
     }
 
+    &__number{
+        border-radius: 50%;
+        border: solid transparent;
+        background-color: $color_primary;
+        width: 20px;
+        height: 50%;
+        color: $color-bg2;
+        position: relative;
+        left: 25px;
+        display: flex;
+
+    }
 }
 
 
-.howitworks__number{
-    border-radius: 50%;
-    border: solid transparent;
-    background-color: $color_primary;
-    width: 20px;
-    height: 50%;
-    color: $color-bg2;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: relative;
-    left: 25px;
 
-
-}
 
 .cont_new{
     background-color: $color-trd;
@@ -103,7 +119,10 @@ img{
 
 a{
     text-decoration: none;
+    color:inherit;
 }
+
+
 
 .descript{
     display: flex;
@@ -115,6 +134,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
 }
 
 .carte{

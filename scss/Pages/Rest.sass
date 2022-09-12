@@ -1,0 +1,69 @@
+.meal_card
+    background-color: $color-bg2
+    @include border-carte()
+    @include card-shadow
+    @include padding_cards
+    display: flex
+    flex-direction: column
+    margin-bottom: 15px
+    &__detailprice
+        display: flex
+        justify-content: space-between
+        @include padding_cards
+
+    &__contmeal
+        @include padding_cards
+
+
+.restaurant
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: baseline
+    background-color: $color-bg1
+    border:0px solid
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+
+    &__title
+        font-family: Shrikhand, sans-serif
+        font-size: 1.7rem
+        padding-top: 30px
+        padding-left: 15px
+
+
+
+.cont_accbtn
+    display: flex
+    justify-content: center
+    padding-top: 20px
+    padding-bottom: 20px
+
+.img_fond
+    z-index: -1
+    position: relative
+    top: 40px
+
+
+.cont_meal_title
+    width: 40px
+    margin-left: 5%
+    border-bottom: $color-trd 2px solid 
+
+.title_meal
+    color: darken($color_bg3, 50%)
+    font-size: 0.9rem
+    padding-top: 30px
+
+
+.test
+    display: flex
+    flex-direction: column
+
+.cont_choice
+    background-color: $color-bg1
+
+.img_restau
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+    

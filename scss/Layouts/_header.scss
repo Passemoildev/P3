@@ -3,7 +3,34 @@
     display: flex;
     justify-content: center;
 
-    .header__logo{
+    &__logo{
         width: 40%;
     }
+
+
 }
+
+.header_rest{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    &__logo{
+        font-family: Shrikhand, sans-serif;
+        text-align: center;
+        left: 40%;
+        width: 50%;
+        font-size: 2rem;
+
+    }
+    &__emptybox{
+        width: 25%;
+    }
+}
+
+.return{
+    width: 25%;
+    font-size: 1.3rem;
+    
+}
+

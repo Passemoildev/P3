@@ -16,11 +16,11 @@
     <body class="body">
 
         <div class="loading-spinner">
-            <div class="loading-spinner__logo">
+            <span class="loading-spinner__logo">
                 OMF
-            </div>
+            </span>
         </div>
-
+        <div class="blur">
         <header class="header">
                 <img src="./Ressources/images/logo/ohmyfood.png" alt="logo" class="header__logo">
         </header>
@@ -54,138 +54,160 @@
                 </div>
             </div>
 
-            <div class="fontionnement">
+            <div class="fonctionnement">
 
-                <h1>Fonctionnement</h1>
-
-                <div class="howitworks">
-                    <div class="howitworks howitworks__number">1</div>
-                    <div class="howitworks howitworks__spot">
-                        <div><i class="fa-solid fa-mobile-screen-button"></i></div>
-                        <div><h3>Choisissez un restaurant</h3></div>
-                    </div>
+                <div class="fonctionnement__title">
+                    <h1>Fonctionnement</h1>
                 </div>
 
-                <div class="howitworks">
-                    <div class="howitworks howitworks__number">2</div>
-                    <div class="howitworks howitworks__spot">
-                        <div><i class="fa-solid fa-list"></i></div>
-                        <h3>Composez votre menu</h3>
+                <div class="fonctionnement__title__cont-howitworks">
+
+                    <div class="howitworks">
+                        <div class="howitworks howitworks__number">1</div>
+                        <div class="howitworks howitworks__spot">
+                            <div><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div><h3>Choisissez un restaurant</h3></div>
+                        </div>
+                    </div>
+
+                    <div class="howitworks">
+                        <div class="howitworks howitworks__number">2</div>
+                        <div class="howitworks howitworks__spot">
+                            <div><i class="fa-solid fa-list"></i></div>
+                            <h3>Composez votre menu</h3>
+                        </div>
+                    </div>
+
+                    <div class="howitworks">
+                        <div class="howitworks howitworks__number">3</div>
+                        <div class="howitworks howitworks__spot">
+                            <div><i class="fa-solid fa-store"></i></div>
+                            <h3>Dégustez au restaurant</h3>
+                        </div>
                     </div>
                 </div>
-
-                <div class="howitworks">
-                    <div class="howitworks howitworks__number">3</div>
-                    <div class="howitworks howitworks__spot">
-                        <div><i class="fa-solid fa-store"></i></div>
-                        <h3>Dégustez au restaurant</h3>
-                    </div>
-                </div>
-
 
             </div>
 
-            <section id="Restaurants">
+            <div class="Restaurants">
                 <article class="list-rest">
                     <div class="proj-grid">
-                        <div>
+                        <div class="proj-grid__title">
                             <h2>Restaurants</h2>
                         </div>
 
-                        <a class="carte" href="./R003.html">
-                            <div class="cell">
-                                <div class="slot">
-                                    <div class="minia">
-                                        <img src="./Ressources/images/restaurants/la_palette_du_gout.jpg" class="img_restau" alt="La palette du gout">
-                                        <div class="cont_new">Nouveau</div>
-                                    </div>
-                                    <div class="descript">
-                                        <div class="loc">
-                                            <h4>La palette du goût</h4>
-                                            <p>Ménilmontant</p>
+                        <div class="cont_carte">
+
+                            <a class="carte" href="./R003.html">
+                                <div class="cell">
+                                    <div class="slot">
+                                        <div class="minia">
+                                            <img src="./Ressources/images/restaurants/la_palette_du_gout.jpg" class="img_restau" alt="La palette du gout">
+                                            <div class="cont_new">Nouveau</div>
                                         </div>
-                                        <div class="cont_cadre">
-                                            <div class="add_to_fav">
-                                                <i class="fa-solid fa-heart"></i>
+                                        <div class="descript">
+                                            <div class="loc">
+                                                <h4>La palette du goût</h4>
+                                                <p>Ménilmontant</p>
                                             </div>
+                                            <div class="cont_cadre">
+                                                <div class="add_to_fav--empty">
+                                                    <i class="fa-light fa-heart"></i>
+                                                </div>
+
+                                                <div class="add_to_fav--full">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
 
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a class="carte" href="./R002.html">
-                            <div class="cell">
-                                <div class="slot">
-                                    <div class="minia">
-                                        <img src="./Ressources/images/restaurants/La_note_enchantee.jpg" class="img_restau" alt="La note enchantée">
-                                        <div class="cont_new">Nouveau</div>
-
-                                    </div>
-                                    <div class="descript">
-                                        <div class="loc">
-                                            <h4>La note enchantée</h4>
-                                            <p>Charonne</p>
-                                        </div>
-                                        <div class="cont_cadre">
-                                            <div class="add_to_fav">
-                                                <i class="fa-light fa-heart"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
-                        <a class="carte" href="./R001.html">
-                            <div class="cell">
-                                <div class="slot">
-                                    <div class="minia">
-                                        <img src="./Ressources/images/restaurants/a_la_francaise.jpg" class="img_restau" alt="A la francaise">
-                                    </div>
-                                    <div class="descript">
-                                        <div class="loc">
-                                            <h4>A la française</h4>
-                                                <p>Cité Rouge</p>
+                            <a class="carte" href="./R002.html">
+                                <div class="cell">
+                                    <div class="slot">
+                                        <div class="minia">
+                                            <img src="./Ressources/images/restaurants/La_note_enchantee.jpg" class="img_restau" alt="La note enchantée">
+                                            <div class="cont_new">Nouveau</div>
+
                                         </div>
-                                        <div class="cont_cadre">
-                                            <div class="add_to_fav">
-                                                <i class="fa-light fa-heart"></i>
+                                        <div class="descript">
+                                            <div class="loc">
+                                                <h4>La note enchantée</h4>
+                                                <p>Charonne</p>
+                                            </div>
+                                            <div class="cont_cadre">
+                                                <div class="add_to_fav--empty">
+                                                    <i class="fa-light fa-heart"></i>
+                                                </div>
+
+                                                <div class="add_to_fav--full">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
-                        <a class="carte" href="./R004.html">
-                            <div class="cell">
-                                <div class="slot">
-                                    <div class="minia">
-                                        <img src="./Ressources/images/restaurants/Le_delice_des_sens.jpg" class="img_restau" alt="Le_delice_des_sens">
-                                    </div>
-                                    <div class="descript">
-                                        <div class="loc">
-                                            <h4>Le délice des sens</h4>
-                                                <p>Folie-Méricourt</p>
+                            <a class="carte" href="./R001.html">
+                                <div class="cell">
+                                    <div class="slot">
+                                        <div class="minia">
+                                            <img src="./Ressources/images/restaurants/a_la_francaise.jpg" class="img_restau" alt="A la francaise">
                                         </div>
-                                        <div class="cont_cadre">
-                                            <div class="add_to_fav">
-                                                <i class="fa-light fa-heart"></i>
+                                        <div class="descript">
+                                            <div class="loc">
+                                                <h4>A la française</h4>
+                                                    <p>Cité Rouge</p>
+                                            </div>
+                                            <div class="cont_cadre">
+                                                <div class="add_to_fav--empty">
+                                                    <i class="fa-light fa-heart"></i>
+                                                </div>
+
+                                                <div class="add_to_fav--full">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
 
+                            <a class="carte" href="./R004.html">
+                                <div class="cell">
+                                    <div class="slot">
+                                        <div class="minia">
+                                            <img src="./Ressources/images/restaurants/Le_delice_des_sens.jpg" class="img_restau" alt="Le_delice_des_sens">
+                                        </div>
+                                        <div class="descript">
+                                            <div class="loc">
+                                                <h4>Le délice des sens</h4>
+                                                    <p>Folie-Méricourt</p>
+                                            </div>
+                                            <div class="cont_cadre">
+                                                <div class="add_to_fav--empty">
+                                                    <i class="fa-light fa-heart"></i>
+                                                </div>
+
+                                                <div class="add_to_fav--full">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                                 
                     </div>
                 
                 </article>
-            </section>
+            </div>
 
             <footer class="footer">
                 
@@ -215,7 +237,7 @@
             </footer>
 
         </main>
-
+    </div>
     </body>
 
 </html>

@@ -11,14 +11,26 @@
 
 /* Mixins pour media queries*/
 
-@mixin mobile-only {
+@mixin mobile {
     
     @media all and (max-width:map-get($breakpoints, mobile)){
     
-        grid-template-columns: 1fr;
+       @content
     
     
 }}
+
+@mixin tab{
+    @media all and (max-width:map-get($breakpoints, tab)){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media all and (min-width:map-get($breakpoints, desktop)){
+        @content;   
+    }
+}
 
 
 @mixin card-shadow ($color:$color_bg3){

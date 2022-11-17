@@ -10,9 +10,153 @@
         display: flex
         justify-content: space-between
         @include padding_cards
+        overflow: hidden
+        text-overflow: ellipsis
+
+        &__check
+            display: flex
+            justify-content: center
+            align-items: center
+            color: $color-trd
+            border-radius: 100px
+            background-color: #FFFF
+            width: 30px
+            height: 30px
+            opacity: 0
+            margin-top: 10%
+            margin-left: -30px
+            font-size: 1.5rem
+            
+            &--logo 
+                justify-content: center
+                align-items: center
+                color: $color-trd
+                border-radius: 100px
+                background-color: #FFFF
+                width: 30px
+                height: 30px
+                opacity: 0
+                margin-top: 10%
+                margin-left: -30px
+                font-size: 1.5rem
+
+            &--bg 
+                background-color: $color-trd
+                border-top-right-radius: 25%
+                border-bottom-right-radius: 25%
+                width:15%
+                @include mobile 
+                    width: 20%
+                    left: 80%
+                
+                height: 100%
+                position: absolute
+                left: 85%
+                transform: scale(0)
+                transform-origin: right center
+                    width: 20%
+                    left: 80%
+                
+    &:hover 
+        >.meal_card__contmeal 
+            animation-name: dish-checked-quote-text-ellipsis
+            animation-duration: 0.5s
+            animation-fill-mode: forwards
+
+        >.meal_card__detailprice 
+            overflow: hidden
+            text-overflow: ellipsis
+            >.cont_meal_price 
+                animation-name: dish-checked-price-shift
+                animation-duration: 0.5s
+                animation-fill-mode: forwards
+
+            >.cont_meal_detail 
+                animation-name: dish-checked-quote-text-ellipsis-little
+                animation-duration: 0.5s
+                animation-fill-mode: forwards
+                overflow: hidden
+                text-overflow: ellipsis
+
+        >.meal_card__detailprice__check 
+            >.meal_card__detailprice__check--logo 
+                animation-name: dish-checked-logo-animation
+                animation-duration: 2s
+                animation-fill-mode: forwards
+            
+        
+        >.meal_card__detailprice__check--bg
+            animation-name: dish-checked-background-scale
+            animation-duration: 0.5s
+            animation-fill-mode: forwards
 
     &__contmeal
         @include padding_cards
+
+.cont_meal_detail
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+        
+@keyframes dish-checked-logo-animation 
+    0% 
+        transform: rotate(0)
+        opacity: 0
+    
+    100% 
+        transform: rotate(720deg)
+        opacity: 1
+    
+
+@keyframes dish-checked-price-shift 
+    0% 
+        transform: translateX(0)
+    
+    100% 
+        transform: translateX(-75px)
+    
+
+@keyframes dish-checked-price-shift-large 
+    0% 
+        transform: translateX(0)
+    
+    100% 
+        transform: translateX(-95px)
+    
+
+@keyframes dish-checked-price-shift-little 
+    0% 
+        transform: translateX(0)
+    
+    100% 
+        transform: translateX(-60px)
+    
+
+@keyframes dish-checked-background-scale 
+    0% 
+        transform: scaleX(0.1)
+    
+    100% 
+        transform: scaleX(1)
+    
+
+@keyframes dish-checked-quote-text-ellipsis 
+    0% 
+        width: 90%
+    
+    100% 
+        width: 60%
+    
+
+@keyframes dish-checked-quote-text-ellipsis-little 
+    0% 
+        width: 90%
+    
+    100% 
+        width: 50%
+    
+
 
 
 .restaurant
@@ -30,6 +174,7 @@
         font-size: 1.7rem
         padding-top: 30px
         padding-left: 15px
+        width: 70%
 
 
 
@@ -67,3 +212,11 @@
     border-top-left-radius: 0px
     border-top-right-radius: 0px
     
+.cont_cadre_rest
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 40px
+    position: relative
+    height: 94.53px
+

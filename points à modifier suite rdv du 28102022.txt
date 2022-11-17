@@ -1,0 +1,13 @@
+*creuser ellipsis
+	--> il faut un p?
+
+*faire le after du loading spinner
+	--> le faire disparaitre
+
+*faire que blur ne soit pas cliquable :
+
+	div.not-clickable { pointer-events: none; } 	--> developer.mozilla.org/en/docs/Web/CSS/pointer-events
+
+	.noClick {
+  	 pointer-events: none;
+	}

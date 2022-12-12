@@ -3,6 +3,9 @@
 /* Définition des couleurs*/
 /* Définition des durées d'animation*/
 /* Mixins pour media queries*/
+/*Définition des breakpoints*/
+/* Définition des couleurs*/
+/* Définition des durées d'animation*/
 body {
   font-family: "Roboto-Regular", sans-serif;
   display: flex;
@@ -105,6 +108,15 @@ h3, h4, p {
     padding: 20px;
     margin: 10px;
   }
+  .howitworks__spot .meal_card__detailprice__check--bg {
+    width: 20%;
+    left: 80%;
+  }
+  .howitworks__spot .cont_loadingS {
+    position: absolute;
+    top: 13%;
+    left: 43%;
+  }
 }
 @media all and (min-width: 769px) {
   .howitworks__spot {
@@ -124,6 +136,15 @@ h3, h4, p {
   .howitworks__number {
     position: relative;
     left: 25px;
+  }
+  .howitworks__number .meal_card__detailprice__check--bg {
+    width: 20%;
+    left: 80%;
+  }
+  .howitworks__number .cont_loadingS {
+    position: absolute;
+    top: 13%;
+    left: 43%;
   }
 }
 
@@ -297,6 +318,9 @@ article {
   }
 }
 
+/*Définition des breakpoints*/
+/* Définition des couleurs*/
+/* Définition des durées d'animation*/
 .header {
   background-color: #ffffff;
   display: flex;
@@ -336,6 +360,9 @@ article {
   background-color: #eaeaea;
 }
 
+/*Définition des breakpoints*/
+/* Définition des couleurs*/
+/* Définition des durées d'animation*/
 .footer {
   background-color: #353535;
   color: #ffffff;
@@ -353,49 +380,80 @@ article {
   padding: 5px;
 }
 
-.meal_card {
+/*Définition des breakpoints*/
+/* Définition des couleurs*/
+/* Définition des durées d'animation*/
+/* Mixins pour media queries*/
+.cont_meal_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
   background-color: #ffffff;
   border: solid 0px;
   border-radius: 10px;
   box-shadow: 5px 5px 3px #eaeaea;
-  padding: 5px;
+  height: 65px;
+  margin-top: 30px;
+}
+.cont_meal_card:hover {
+  cursor: pointer;
+}
+.cont_meal_card:hover > .meal_card__detailprice__check {
+  width: 65px;
+}
+.cont_meal_card:hover > .meal_card__detailprice__check > .meal_card__detailprice__check--logo {
+  animation-name: check;
+  animation-duration: 1s;
+  transition-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.meal_card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  justify-content: space-around;
+  width: 100%;
+  height: 65px;
+}
+.meal_card__contmeal {
+  font-weight: bold;
 }
 .meal_card__detailprice {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.meal_card__detailprice__price {
+  padding-right: 15px;
+  font-weight: bold;
 }
 .meal_card__detailprice__check {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #99e2d0;
-  border-radius: 100px;
-  background-color: white;
-  width: 30px;
-  height: 30px;
-  opacity: 0;
-  margin-top: 10%;
-  margin-left: -30px;
+  background-color: #99e2d0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 0px;
+  height: 65px;
   font-size: 1.5rem;
+  transition: width 1s;
 }
 .meal_card__detailprice__check--logo {
+  display: flex;
   justify-content: center;
   align-items: center;
   color: #99e2d0;
   border-radius: 100px;
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
   opacity: 0;
-  margin-top: 10%;
-  margin-left: -30px;
-  font-size: 1.5rem;
+  transition: opacity 1s;
 }
 .meal_card__detailprice__check--bg {
   background-color: #99e2d0;
@@ -407,48 +465,17 @@ article {
   left: 85%;
   transform: scale(0);
   transform-origin: right center;
-  transform-origin-width: 20%;
-  transform-origin-left: 80%;
 }
 @media all and (max-width: 480px) {
-  .meal_card__detailprice__check--bg {
+  .meal_card__detailprice__check--bg .meal_card__detailprice__check--bg {
     width: 20%;
     left: 80%;
   }
-}
-.meal_card:hover > .meal_card__contmeal {
-  animation-name: dish-checked-quote-text-ellipsis;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-.meal_card:hover > .meal_card__detailprice {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.meal_card:hover > .meal_card__detailprice > .cont_meal_price {
-  animation-name: dish-checked-price-shift;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-.meal_card:hover > .meal_card__detailprice > .cont_meal_detail {
-  animation-name: dish-checked-quote-text-ellipsis-little;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.meal_card:hover > .meal_card__detailprice__check > .meal_card__detailprice__check--logo {
-  animation-name: dish-checked-logo-animation;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-.meal_card:hover > .meal_card__detailprice__check--bg {
-  animation-name: dish-checked-background-scale;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-.meal_card__contmeal {
-  padding: 5px;
+  .meal_card__detailprice__check--bg .cont_loadingS {
+    position: absolute;
+    top: 13%;
+    left: 43%;
+  }
 }
 
 .cont_meal_detail {
@@ -581,6 +608,22 @@ article {
   height: 94.53px;
 }
 
+@keyframes dish-check {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 65px;
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .pop-1 {
   opacity: 0;
   transform: scale(1);
@@ -620,11 +663,19 @@ article {
   }
   100% {
     opacity: 1;
-    transform: translateY(20px);
+    transform: translateY(-20px);
   }
 }
 body {
   position: relative;
+}
+
+.blur {
+  animation-name: blur;
+  animation-duration: 2s;
+  /*animation-delay: 3s;*/
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .cont_loadingS {
@@ -633,11 +684,23 @@ body {
   width: 100%;
   animation-name: loading-spinner-body-blur;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 0.1;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   /*pointer-events: auto;*/
+}
+@media all and (max-width: 480px) {
+  .cont_loadingS {
+    position: absolute;
+    top: -10%;
+    left: -9%;
+  }
 }
 
 .loading-spinner {
@@ -648,14 +711,33 @@ body {
   height: 50px;
   width: 50px;
   display: flex;
-  border: 4px solid #ff79DA;
   border-bottom-left-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-top-right-radius: 50%;
   align-items: center;
   position: absolute;
-  top: 25%;
+  top: 20%;
+  left: 48%;
+  right: 0;
+  bottom: 0;
+  /*margin: auto;*/
+  opacity: 1;
+  animation-name: erase;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@media all and (max-width: 480px) {
+  .loading-spinner .meal_card__detailprice__check--bg {
+    width: 20%;
+    left: 80%;
+  }
+  .loading-spinner .cont_loadingS {
+    position: absolute;
+    top: 13%;
+    left: 43%;
+  }
 }
 .loading-spinner__logo {
   animation-name: rotation;
@@ -667,21 +749,54 @@ body {
 @keyframes rotation {
   0% {
     transform: rotate(0turn);
+    z-index: 3;
   }
   50% {
     transform: rotate(0.5turn);
   }
+  99% {
+    z-index: 3;
+    opacity: 1;
+  }
   100% {
     transform: rotate(1turn);
     z-index: -3;
+    opacity: 0;
   }
 }
 @keyframes loading-spinner-body-blur {
   0% {
-    z-index: -3;
+    z-index: 3;
   }
   100% {
-    z-index: 3;
+    z-index: -3;
+  }
+}
+@keyframes blur {
+  0% {
+    opacity: 0.1;
+    z-index: 2;
+  }
+  99% {
+    opacity: 0.1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 1;
+    z-index: -3;
+  }
+}
+@keyframes erase {
+  0% {
+    border: 4px solid #ff79DA;
+    opacity: 1;
+  }
+  99% {
+    border: 4px solid #ff79DA;
+    opacity: 1;
+  }
+  100% {
+    border: 0px;
   }
 }
 

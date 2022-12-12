@@ -14,11 +14,35 @@
 @mixin mobile {
     
     @media all and (max-width:map-get($breakpoints, mobile)){
-    
+
+        .meal_card__detailprice__check--bg {
+            width: 20%;
+            left: 80%;
+          }
+        
+
+        .cont_loadingS{
+            position:absolute;
+            top : 13%;
+            left: 43%;
+        
+
+        }
+
        @content
     
     
 }}
+
+@mixin positionLS{
+
+    @media all and (max-width:map-get($breakpoints, mobile)){
+            position:absolute;
+            top : -10%;
+            left: -9%;
+    @content
+
+    }}
 
 @mixin tab{
     @media all and (max-width:map-get($breakpoints, tab)){
@@ -47,6 +71,6 @@
 }
 
 @mixin padding_cards{
-    padding: 5px;
+    padding-left: 5px;
 
 }

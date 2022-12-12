@@ -1,44 +1,70 @@
-.meal_card
+@import "../Utils/_variables"
+@import "../Utils/_mixins"
+
+.cont_meal_card
+    display: flex
+    flex-direction: row
+    align-items: center
+    @include padding_cards
     background-color: $color-bg2
     @include border-carte()
     @include card-shadow
-    @include padding_cards
+    height: 65px
+    margin-top: 30px
+    &:hover
+        cursor: pointer
+        >.meal_card__detailprice__check
+            width: 65px
+            >.meal_card__detailprice__check--logo
+                animation-name: check
+                animation-duration: 1s
+                transition-timing-function: linear
+                animation-fill-mode: forwards
+                opacity: 1
+
+
+
+.meal_card
     display: flex
     flex-direction: column
-    margin-bottom: 15px
+    justify-content: space-around
+    width: 100%
+    height: 65px
+    &__contmeal
+        font-weight: bold
     &__detailprice
         display: flex
         justify-content: space-between
-        @include padding_cards
         overflow: hidden
         text-overflow: ellipsis
+        &__price
+            padding-right: 15px
+            font-weight: bold
 
         &__check
             display: flex
             justify-content: center
             align-items: center
-            color: $color-trd
-            border-radius: 100px
-            background-color: #FFFF
-            width: 30px
-            height: 30px
-            opacity: 0
-            margin-top: 10%
-            margin-left: -30px
+            background-color: $color-trd
+            border-top-right-radius: 10px
+            border-bottom-right-radius: 10px
+            width: 0px
+            height: 65px
             font-size: 1.5rem
+            transition: width 1s
             
             &--logo 
+                display: flex
                 justify-content: center
                 align-items: center
                 color: $color-trd
                 border-radius: 100px
                 background-color: #FFFF
-                width: 30px
-                height: 30px
+                width: 25px
+                height: 25px
+                font-size: 1rem
                 opacity: 0
-                margin-top: 10%
-                margin-left: -30px
-                font-size: 1.5rem
+                transition: opacity 1s, 
 
             &--bg 
                 background-color: $color-trd
@@ -46,52 +72,13 @@
                 border-bottom-right-radius: 25%
                 width:15%
                 @include mobile 
-                    width: 20%
-                    left: 80%
-                
                 height: 100%
                 position: absolute
                 left: 85%
                 transform: scale(0)
                 transform-origin: right center
-                    width: 20%
-                    left: 80%
                 
-    &:hover 
-        >.meal_card__contmeal 
-            animation-name: dish-checked-quote-text-ellipsis
-            animation-duration: 0.5s
-            animation-fill-mode: forwards
 
-        >.meal_card__detailprice 
-            overflow: hidden
-            text-overflow: ellipsis
-            >.cont_meal_price 
-                animation-name: dish-checked-price-shift
-                animation-duration: 0.5s
-                animation-fill-mode: forwards
-
-            >.cont_meal_detail 
-                animation-name: dish-checked-quote-text-ellipsis-little
-                animation-duration: 0.5s
-                animation-fill-mode: forwards
-                overflow: hidden
-                text-overflow: ellipsis
-
-        >.meal_card__detailprice__check 
-            >.meal_card__detailprice__check--logo 
-                animation-name: dish-checked-logo-animation
-                animation-duration: 2s
-                animation-fill-mode: forwards
-            
-        
-        >.meal_card__detailprice__check--bg
-            animation-name: dish-checked-background-scale
-            animation-duration: 0.5s
-            animation-fill-mode: forwards
-
-    &__contmeal
-        @include padding_cards
 
 .cont_meal_detail
     overflow: hidden
@@ -220,3 +207,14 @@
     position: relative
     height: 94.53px
 
+@keyframes dish-check
+    0%
+        width:0px
+    100%
+        width:65px
+
+@keyframes check
+    0%
+        transform: rotate(0turn)
+    100%
+        transform: rotate(1turn)

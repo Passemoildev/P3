@@ -30,16 +30,23 @@
     justify-content: space-around
     width: 100%
     height: 65px
+
     &__contmeal
         font-weight: bold
     &__detailprice
         display: flex
         justify-content: space-between
-        overflow: hidden
-        text-overflow: ellipsis
         &__price
             padding-right: 15px
             font-weight: bold
+        &__detail
+            white-space: nowrap
+            overflow: hidden
+            max-width: 75%
+            text-overflow: ellipsis
+            
+
+
 
         &__check
             display: flex
@@ -66,83 +73,13 @@
                 opacity: 0
                 transition: opacity 1s, 
 
-            &--bg 
-                background-color: $color-trd
-                border-top-right-radius: 25%
-                border-bottom-right-radius: 25%
-                width:15%
-                @include mobile 
-                height: 100%
-                position: absolute
-                left: 85%
-                transform: scale(0)
-                transform-origin: right center
-                
-
-
+            
 .cont_meal_detail
     overflow: hidden
     text-overflow: ellipsis
     white-space: nowrap
 
         
-@keyframes dish-checked-logo-animation 
-    0% 
-        transform: rotate(0)
-        opacity: 0
-    
-    100% 
-        transform: rotate(720deg)
-        opacity: 1
-    
-
-@keyframes dish-checked-price-shift 
-    0% 
-        transform: translateX(0)
-    
-    100% 
-        transform: translateX(-75px)
-    
-
-@keyframes dish-checked-price-shift-large 
-    0% 
-        transform: translateX(0)
-    
-    100% 
-        transform: translateX(-95px)
-    
-
-@keyframes dish-checked-price-shift-little 
-    0% 
-        transform: translateX(0)
-    
-    100% 
-        transform: translateX(-60px)
-    
-
-@keyframes dish-checked-background-scale 
-    0% 
-        transform: scaleX(0.1)
-    
-    100% 
-        transform: scaleX(1)
-    
-
-@keyframes dish-checked-quote-text-ellipsis 
-    0% 
-        width: 90%
-    
-    100% 
-        width: 60%
-    
-
-@keyframes dish-checked-quote-text-ellipsis-little 
-    0% 
-        width: 90%
-    
-    100% 
-        width: 50%
-    
 
 
 
@@ -175,6 +112,11 @@
     z-index: -1
     position: relative
     top: 40px
+    @include desktop
+        z-index: -1
+        position: relative
+        top: 40px
+        max-height: 250px
 
 
 .cont_meal_title
@@ -207,11 +149,6 @@
     position: relative
     height: 94.53px
 
-@keyframes dish-check
-    0%
-        width:0px
-    100%
-        width:65px
 
 @keyframes check
     0%

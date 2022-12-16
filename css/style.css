@@ -423,12 +423,16 @@ article {
 .meal_card__detailprice {
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .meal_card__detailprice__price {
   padding-right: 15px;
   font-weight: bold;
+}
+.meal_card__detailprice__detail {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 75%;
+  text-overflow: ellipsis;
 }
 .meal_card__detailprice__check {
   display: flex;
@@ -455,28 +459,6 @@ article {
   opacity: 0;
   transition: opacity 1s;
 }
-.meal_card__detailprice__check--bg {
-  background-color: #99e2d0;
-  border-top-right-radius: 25%;
-  border-bottom-right-radius: 25%;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 85%;
-  transform: scale(0);
-  transform-origin: right center;
-}
-@media all and (max-width: 480px) {
-  .meal_card__detailprice__check--bg .meal_card__detailprice__check--bg {
-    width: 20%;
-    left: 80%;
-  }
-  .meal_card__detailprice__check--bg .cont_loadingS {
-    position: absolute;
-    top: 13%;
-    left: 43%;
-  }
-}
 
 .cont_meal_detail {
   overflow: hidden;
@@ -484,64 +466,6 @@ article {
   white-space: nowrap;
 }
 
-@keyframes dish-checked-logo-animation {
-  0% {
-    transform: rotate(0);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(720deg);
-    opacity: 1;
-  }
-}
-@keyframes dish-checked-price-shift {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-75px);
-  }
-}
-@keyframes dish-checked-price-shift-large {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-95px);
-  }
-}
-@keyframes dish-checked-price-shift-little {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-60px);
-  }
-}
-@keyframes dish-checked-background-scale {
-  0% {
-    transform: scaleX(0.1);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-@keyframes dish-checked-quote-text-ellipsis {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 60%;
-  }
-}
-@keyframes dish-checked-quote-text-ellipsis-little {
-  0% {
-    width: 90%;
-  }
-  100% {
-    width: 50%;
-  }
-}
 .restaurant {
   display: flex;
   flex-direction: row;
@@ -571,6 +495,14 @@ article {
   z-index: -1;
   position: relative;
   top: 40px;
+}
+@media all and (min-width: 769px) {
+  .img_fond {
+    z-index: -1;
+    position: relative;
+    top: 40px;
+    max-height: 250px;
+  }
 }
 
 .cont_meal_title {
@@ -608,14 +540,6 @@ article {
   height: 94.53px;
 }
 
-@keyframes dish-check {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 65px;
-  }
-}
 @keyframes check {
   0% {
     transform: rotate(0turn);
@@ -693,7 +617,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /*pointer-events: auto;*/
 }
 @media all and (max-width: 480px) {
   .cont_loadingS {
@@ -775,15 +698,15 @@ body {
 @keyframes blur {
   0% {
     opacity: 0.1;
-    z-index: 2;
+    pointer-events: none;
   }
   99% {
     opacity: 0.1;
-    z-index: 2;
+    pointer-events: none;
   }
   100% {
     opacity: 1;
-    z-index: -3;
+    pointer-events: auto;
   }
 }
 @keyframes erase {

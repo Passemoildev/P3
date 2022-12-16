@@ -27,7 +27,6 @@ body{
     right: 0;
     bottom: 0;
     @include positionLS;
-    /*pointer-events: auto;*/
 
 }
 
@@ -109,16 +108,16 @@ body{
 @keyframes blur{
     0%{
         opacity :0.1;
-        z-index: 2;
+        pointer-events: none;
     }
 
     99%{
         opacity : 0.1;
-        z-index: 2;
+        pointer-events: none;
     }
     100%{
         opacity : 1;
-        z-index: -3;
+        pointer-events: auto;
     }
 }
 

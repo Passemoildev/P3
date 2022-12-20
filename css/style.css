@@ -325,6 +325,8 @@ article {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 .header__logo {
   width: 40%;
@@ -368,13 +370,16 @@ article {
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 .footer__title {
   font-family: Shrikhand, sans-serif;
+  margin: 10px;
 }
 .footer__list {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
 }
 .footer__row {
   padding: 5px;
